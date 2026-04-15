@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<HTML lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <header>Recursion in JS</header>
+    </head>
+    <body>
+        <h1>Recursion</h1>
+        <h2>1st countdown</h2>
+        <p id = "countDown"></p>
+        <script type = "text/babel">
+            const countDown = (value, fn) => {
+                fn(value);
+                return (value > 0 ) ? countDown(value - 1, fn) : value;
+            };
+            const displayElement = document.getElementById("countDown");
+            let output = "";
+
+            countDown(10, value => {
+                output += value + "<br>";
+            });
+
+            displayElement.innerHTML = output;
+        </script>
+
+        <h2>2nd countdown</h2>
+        <p id = "countDown2"></p>
+        <script type = "text/babel">
+            const countDownElement = document.getElementById("countDown2");
+
+            const countDown2 = (value, fn, delay = 1000) => {
+                fn(value);
+                if(value > 0 ){
+                    setTimeout(() => countDown2(value -1, fn, delay), delay);
+                }
+            };
+            const logToBrowser = value => {
+                countDownElement.innerHTML = value;
+            };
+
+            countDown2(10, logToBrowser);
+
+        </script>
+
+    </body>
+
+</html>

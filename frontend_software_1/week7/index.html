@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="css/style1.css">		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<title>My Store</title>
+	</head>
+	<body>
+	<!-- start nav bar -->
+		<div id="nav">
+			<script>
+				$(function(){
+					$("#nav").load("./header/nav.html");
+				});
+			</script>		</div>
+		
+	<!-- end nav bar-->
+	<main> 
+		<div class ="containerHome">
+		<h1 class="dnd">My store home page</h1>
+			<div class="hero">
+			<!--	<img src="./img/logo.png" alt="My Store logo"> -->
+			</div>			<div class="featured">
+				<h2 class="homeHeading">Featured Products</h2>
+				<div class="prod">
+					<a href="./vase.html"><img src="./img/vase.png" alt="fancy vase"
+					></a>
+				</div>
+
+				<div class="prod">
+					<a href="./lamp.html"><img src="./img/lamp.png" alt="fancy'ish Lamp"
+					></a>
+				</div>
+
+				<div class="prod">
+					<a href="./tea-set.html"><img src="./img/teaset.png" alt="image of a tea set"
+					></a>
+				</div>
+			</div>
+			<div class="break1">
+			
+			</div>
+			
+			<div class="aboutHome">
+				<h2 class="homeHeading">About Us</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+				dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+				</p>
+				<button class="bt" onclick="window.location.href='./about.html'">
+					Learn More
+				</button>
+			</div>
+		</div>
+	</main>
+	<footer id="footer">		<script>
+			$(function(){
+				$("#footer").load("./footer/footer.html");
+			});
+			</script>
+	</footer>
+</body>
+</html>

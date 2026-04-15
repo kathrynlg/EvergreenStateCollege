@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8">
+    <head>
+    </head>
+	<body>
+        <h1>week 4</h1>
+        <h2>Arrays</h2>        
+        <p id="arrayOutput"></p>
+        <br>
+
+        <h2>For Loops</h2>        
+        <ul id="forLoops"></ul>
+        <br>
+        <h2>while loop</h2>        
+        <ul id="whileLoop"></ul>
+        
+        <br>
+        <h2>for Each</h2>        
+        <ul id="forEach"></ul>
+
+
+        <script>
+        //part1
+        
+            let fruit = ["apple","Banana","Orange"];
+            let firstFruit= fruit[0];
+
+            fruit.push("Mango","SomethingElse");
+
+            document.getElementById("arrayOutput").textContent=("First Fruit "+firstFruit + " | Total Fruits " + fruit.length );
+        //part2
+            
+            let fruits2 =["banana", "apples", "Oranges"];
+
+            for (let i = 0; i < fruits2.length; i++){
+                let listItem = document.createElement("li");
+                listItem.textContent=fruits2[i];
+                document.getElementById("forLoops").appendChild(listItem);
+            }
+        //part 3
+
+            let fruits3 =["banana", "apples", "Oranges"];
+
+            let iNumber = 0;
+
+            while (iNumber < fruits3.length){
+                let listItem = document.createElement("li");
+                listItem.textContent = fruits3[iNumber];
+                document.getElementById("whileLoop").appendChild(listItem);
+                iNumber++;
+            }
+        //part 4
+            let fruits4 =["banana", "apples", "Oranges"];
+
+            fruits4.forEach(function(fruit){
+                let listItem = document.createElement("li");
+                listItem.textContent = fruit;
+                document.getElementById("forEach").appendChild(listItem);
+            });
+
+
+
+        </script>
+
+    <h3><a href="../../../">back to main landing page</a></h3>
+	</body>
+</html>

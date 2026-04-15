@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue + Element Plus Demo2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Element Plus CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus@2.5.6/dist/index.css">  
+
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
+
+    <!-- Element Plus -->
+    <script src="https://unpkg.com/element-plus@2.5.6/dist/index.full.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif; margin: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px; padding: 20px; border: 1px solid #ccc;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Vue + Element Plus Demo2</h1>
+
+    <div id="app">
+
+        <!-- Top Menu -->
+        <div class="menu-container">
+            <el-menu 
+                mode="horizontal" 
+                :default-active="activeMenu" 
+                @select="onMenuSelect"
+            >
+                <el-menu-item index="home">Home</el-menu-item>
+                <el-menu-item index="about">About</el-menu-item>
+                <el-menu-item index="contact">Contact</el-menu-item>
+            </el-menu>
+        </div>
+
+        <!-- Page Header -->
+        <el-page-header 
+            @back="onBack" 
+            style="margin-bottom:20px"
+        >
+            <template #content>
+                <h2>This is a demo page header</h2>
+            </template>
+        </el-page-header>
+
+        <!-- Color Picker -->
+        <div class="content">
+            <h2>Pick a color</h2>
+            <el-color-picker v-model="color" show-alpha />
+            
+            <p style="margin-top: 10px">
+                Selected color:
+                <span :style="{ color }">{{ color }}</span>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Vue App -->
+    <script>
+        const { createApp, ref } = Vue
+
+        createApp({
+            setup() {
+                const activeMenu = ref('home')
+                const color = ref('#409eff')
+                const onMenuSelect = (index) => {
+                    alert(`Menu selected: ${index}`)
+                    activeMenuvalue = index
+                }
+                const onBack =() => {
+                    alert('Back button clicked!')
+                }
+
+                return {activeMenu, color, onMenuSelect, onBack}
+            }
+        })
+
+        .use(ElementPlus)
+        .mount('#app')
+    </script>
+
+</body>
+</html>

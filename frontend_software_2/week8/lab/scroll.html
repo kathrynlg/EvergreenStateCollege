@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Motion API Scroll</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+
+<article id="gallery">
+    <h1>Nature Images</h1>
+
+    <section class="img-group-container">
+        <div>
+            <ul class="img-group">
+                <li class="img-container">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="boats on lake surrounded by mountains">
+                    <h2>#001</h2>
+                </li>
+
+                <li class="img-container">
+                    <img src="https://images.unsplash.com/photo-1771345207864-2f0016374a0a" alt="forests on top of mountains">
+                    <h2>#002</h2>
+                </li>
+
+                <li class="img-container">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b" alt="close up of water">
+                    <h2>#003</h2>
+                </li>
+
+                <li class="img-container">
+                    <img src="https://images.unsplash.com/photo-1771272412569-9dc7449691b5" alt="snow covered trees on mountain top">
+                    <h2>#004</h2>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            Photos by 
+            <a href="https://unsplash.com" target="_blank">
+                Unsplash
+            </a>
+        </p>
+    </footer>
+</article>
+
+<!-- Progress bar element -->
+<div class="progress"></div>
+
+<script type="module">
+import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.34.0/+esm";
+
+const items = document.querySelectorAll(".img-container");
+
+// Horizontal scroll animation
+scroll(
+  animate(".img-group", {
+    transform: ["none", `translateX(-${items.length - 1}00vw)`],
+  }),
+  { target: document.querySelector(".img-group-container") }
+);
+
+// Progress bar animation
+scroll(
+  animate(".progress", { scaleX: [0, 1] }),
+  { target: document.querySelector(".img-group-container") }
+);
+</script>
+
+</body>
+</html>

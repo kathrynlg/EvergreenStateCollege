@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>week 4 creative code</h2>
+
+  <ul id="mathCheck"></ul>
+
+    <script>
+        let sets = 8;
+        const el = document.getElementById("mathCheck");
+
+        for (let i = 0; i < sets; i++) {
+        const textNode = document.createTextNode(
+            "Looping numbers: current number is: " + i
+        );
+
+        el.appendChild(textNode);
+        el.appendChild(document.createElement("br"));
+        }
+
+
+    </script>
+</body>
+</html>

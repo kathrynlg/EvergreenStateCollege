@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Change Me--> 
+    <title>product1</title>
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Material-UI -->
+    <script src="https://unpkg.com/@mui/material@5.15.10/umd/material-ui.production.min.js"></script>
+
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <link rel="stylesheet" href="../css/default.css">
+</head>
+<body>
+    <div id="root"></div>
+    <!--Call to load global nav--> 
+    <script src="../header/nav.js" type="text/babel"></script> 
+    
+    <script type="text/babel">
+        const { AppBar, Toolbar, Typography, Button, Box, Container, Grid, CardMedia } = MaterialUI;
+
+         
+        // Product Detail Component - Change Me
+        function ProductDetail() {
+            const product = {
+                name: "Product 1", 
+                description:"description 1", 
+                price: "999.99", 
+                image: "https://i.ebayimg.com/images/g/rdwAAOSwIbRhJHzy/s-l1600.webp"
+            };
+
+            return (
+                <Container className="indiPaducts">
+                    <Box className="header-title" sx={{ my: 4 }}>
+                        <Typography variant="h2">{product.name}</Typography>
+                    </Box>
+                    <Grid container spacing={4}>
+                        {/* Large Product Image */}
+                        <Grid item xs={12} md={6}>
+                            <CardMedia
+                                component="img"
+                                image={product.image}
+                                alt={product.name}
+                                sx={{ width: "100%", borderRadius: "8px" }}
+                            />
+                        </Grid>
+
+                        {/* Product Description and Add to Cart Button */}
+                        <Grid item xs={12} md={6}>
+                            <Typography variant="body1" paragraph>
+                                {product.description}
+                            </Typography>
+                            <Typography variant="h4" color="primary" gutterBottom>
+                                ${product.price}
+                            </Typography>
+                            <Button variant="contained" color="primary" size="large">
+                                Add to Cart
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Container>
+            );
+        }
+
+        // Footer Component
+        function Footer() {
+            return (
+                <Box className="footer">
+                    <Typography variant="nav1">&copy; 2025 My Product Page <br /></Typography>
+                    <Typography variant="nav1">All Rights Reserved.</Typography>
+                </Box>
+            );
+        }
+
+        // Main App Component
+        function App() {
+            return (
+                <React.Fragment>
+                    <Navbar />
+                    <ProductDetail />
+                    <Footer />
+                </React.Fragment>
+            );
+        }
+
+        // Render the React app
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>

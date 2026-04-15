@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Motion API Demo2 - Fixed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        #three-container{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="three-container"></div>
+    
+    <script type="module">
+        import * as THREE from "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js";
+        import { animate, frame } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+     
+        const main = document.getElementById("three-container");
+
+        const scene = new THREE.Scene();
+
+        const camera = new THREE.PerspectiveCamera(
+            25,
+            main.offsetWidth / main.offsetHeight,
+            0.1,
+            1000
+        );
+
+        const renderer = new THREE.WebGLRenderer({ 
+            antialias: true,
+            alpha: true // enable transparency
+        });
+
+        renderer.setSize(main.offsetWidth, main.offsetHeight);
+        renderer.setClearColor(0xffffff, 0); // transparent background
+        main.appendChild(renderer.domElement);
+
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshPhongMaterial({ color: 0x4ff0b7 });
+        const cube = new THREE.Mesh(geometry, material);
+
+        scene.add(cube);
+
+        // Lighting
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(2, 2, 2);
+        scene.add(directionalLight);
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+        scene.add(ambientLight);
+
+        // Move camera back so cube is visible
+        camera.position.z = 5;
+
+        // Correct radians conversion
+        function rad(degrees){
+            return degrees * (Math.PI / 180);
+        }
+
+        // Animate cube rotation
+        animate(
+            cube.rotation,
+            { y: rad(360), z: rad(360) },
+            { duration: 10, repeat: Infinity, ease: "linear" }
+        );
+
+        // Render loop
+        frame.render(() => {
+            renderer.render(scene, camera);
+        }, true);
+
+    </script>
+
+</body>
+</html>

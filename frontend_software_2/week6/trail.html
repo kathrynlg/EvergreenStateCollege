@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Particle Trail Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #111;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        let particles = [];
+        function createParticle(x, y) {
+            return {
+                x: x,
+                y: y,
+                size: Math.random() * 6 + 2,
+                speedX: (Math.random() - 0.5) * 2,
+                speedY: (Math.random() - 0.5) * 2,
+                life: 100
+            };
+        }
+        window.addEventListener("mousemove", (e) => {
+                for (let i = 0; i < 3; i++) {
+                    particles.push(createParticle(e.clientX, e.clientY));
+                }
+            }
+        
+        );
+        function animate(){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                //Update positions
+                p.x += p.speedX;
+                p.y += p.speedY;
+                //Reduce life and size
+                p.life--;
+                p.size *= 0.97;
+                //Draw particles
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = "white";
+                ctx.fill();
+                //Remove dead particles
+                if (p.life <= 0 || p.size < 0.5) {
+                    particles.splice(i, 1);
+                    i--;
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        animate();
+        window.addEventListener("resize", ()  => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        } );
+    </script>
+</body>
+</html>

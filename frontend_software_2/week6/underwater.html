@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!--
+        <link rel="stylesheet" href="./css/underwater/fonts.css"> -->
+        <link rel="stylesheet" href="./css/underwater/style.css">
+        <title>responsive underwater website landing page design</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        
+    </head>
+	<body>
+        
+        <header>
+        <!-- header start-->
+            <a href="#" class="logo"><h1>logo</h1></a>
+
+             <nav class="navbar">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">blogs</a></li>
+                    <li><a href="#">login</a></li>
+                </ul>
+            </nav>
+
+            <div class="fas fa-bars"></div>
+
+        </header>
+
+        <!-- content -->
+        <div class="container">
+
+            <div class="content">
+                <h1>underwater</h1>
+                <h2>adventure</h2>
+
+                <a href="#"><button>join now</button></a>
+
+                <div class="icons">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+
+            <div class="video-container">
+                <video src="./css/underwater/vid1.mp4" autoplay muted loop class="vid1"></video>
+                <video src="./css/underwater/vid2.mp4" autoplay muted loop class="vid2"></video>
+                <video src="./css/underwater/vid3.mp4" autoplay muted loop class="vid3"></video>
+            </div>
+
+            <div class="controls">
+                <div class="dots dot1"></div>
+                <div class="dots dot2"></div>
+                <div class="dots dot3"></div>
+            </div>
+
+        </div>
+
+
+
+
+        <script>
+            $(document).ready(function(){
+
+                $('.fa-bars').click(function(){
+                    $(this).toggleClass('fa-times');
+                    $('.navbar').toggleClass('nav-toggle');
+                });
+
+                $('.navbar').click(function(){
+                    $(this).removeClass('nav-toggle');
+                    $('.fa-bars').removeClass('fa-times');
+                });   
+
+                $('.dot1').click(function(){
+                    $('.vid1').css('display','block');
+                    $('.vid2').css('display','none');
+                    $('.vid3').css('display','none');
+                });
+
+                $('.dot2').click(function(){
+                    $('.vid1').css('display','none');
+                    $('.vid2').css('display','block');
+                    $('.vid3').css('display','none');
+                });                
+
+                $('.dot3').click(function(){
+                    $('.vid1').css('display','none');
+                    $('.vid2').css('display','none');
+                    $('.vid3').css('display','block');
+                });
+                 
+
+            });
+
+                
+
+        </script>
+
+	</body>
+</html>

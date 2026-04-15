@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Task Tracking App -Vue</title>
+        <link rel="stylesheet" href="./css/style1.css">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <head>
+    </head>
+	<body>
+        <div id="app" class="app"> 
+            <h1>Vue Task Tracker</h1>
+
+            <div class="input-row">
+                <input v-model="newTask" placeholder="Enter a Task..." />
+                <button @click="addTask">Add</button>
+            </div>
+
+            <ul>
+                <li v-for="(task, index) in tasks" :key="index">
+                    <span
+                        @click="toggleTask(index)"
+                        :class="{done: task.done}"> {{task.text}} </span>
+                    <button class="delete" @click="removeTask(index)">X</button>    
+                </li>
+            </ul>
+        </div>
+        
+        <script src="./js/app.js"></script>
+		
+        <v-footer>
+            <h3><a href="../../../">back to main landing page</a></h3>
+        <v-footer>
+            
+
+
+            
+	</body>
+</html>

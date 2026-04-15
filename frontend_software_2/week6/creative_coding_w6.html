@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raining Cats & Dogs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/creativecode.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cloud"></div>
+    </div>
+
+    <script>
+        function rain() {
+            const cloud = document.querySelector('.cloud');
+
+            // Create image element
+            const e = document.createElement('img');
+
+            // Randomly choose cat or dog
+            const animals = ["images/cat.png", "images/dog.png"];
+            e.src = animals[Math.floor(Math.random() * animals.length)];
+
+            // Random horizontal position
+            const left = Math.random() * 280;
+            e.style.left = left + 'px';
+
+            // Random size (30–60px)
+            const size = Math.random() * 30 + 30;
+            e.style.width = size + 'px';
+            e.style.height = 'auto';
+
+            // Random fall duration (2–5s)
+            const duration = Math.random() * 3 + 2;
+            e.style.animationDuration = duration + 's';
+
+            // Add drop class
+            e.classList.add('drop');
+
+            cloud.appendChild(e);
+
+            // Remove after animation finishes
+            setTimeout(() => {
+                cloud.removeChild(e);
+            }, duration * 1000);
+        }
+
+        // Spawn new drops every 200ms
+        setInterval(rain, 200);
+    </script>
+</body>
+</html>

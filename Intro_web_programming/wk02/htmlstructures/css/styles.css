@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+p{
+    font-family: sans-serif, monospace;
+}
+table, th, td{
+    border: 1px solid;
+}
+ul{
+    list-style: circle;
+}
+ol{
+    list-style-type: upper-roman;
+}
+.myDiv1{
+    background-image: linear-gradient(red, yellow);
+}
+
+.myDiv2 h3{
+
+text-shadow: 2px 2px red;
+}
+img{
+    width: 700px;
+    height: auto;
+}

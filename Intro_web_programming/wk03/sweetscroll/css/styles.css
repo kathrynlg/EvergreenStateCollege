@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+body, html{
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "lato" , san-serif;
+    color: #fff;
+}
+
+.cd-logo, .layer-cake, .kitchen-equipment, .cake-ingredients, .bowl-of-cake-mix, 
+.cake-in-oven, .decorated-cake{
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50%;
+}
+
+.cd-logo{
+    background-color: #642580;
+    background-image: url("../imgs/CoderDojo.png");
+    min-height: 100%;
+    background-size: auto;
+}
+.layer-cake{
+    background-image: url("../imgs/img_parallax.jpg");
+}
+.kitchen-equipment{
+    background-image: url("../imgs/utensils.JPG");
+}
+.cake-ingredients{
+    background-image: url("../imgs/ingredients.jpg");
+}
+.bowl-of-cake-mix{
+    background-image: url("../imgs/mixer.jpg");
+}
+.cake-in-oven{
+    background-image: url("../imgs/oven.jpg");
+}
+.decorated-cake{
+    background-color: #642580;
+    background-image: url("../imgs/rosecake.jpg");
+    min-height: 100%;
+    background-size: auto;
+
+}
+
+
+.caption{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+}
+.textSection{
+background-color: #642580;
+padding: 50px 80px;
+}
+
+.border{
+    background-color: #41bac1;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+h2{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "lato" , sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+@media only screen and (max-device-width: 1024px){
+    .cd-logo, .layer-cake, .kitchen-equipment, .cake-ingredients, .bowl-of-cake-mix, 
+.cake-in-oven, .decorated-cake{
+    background-attachment: scroll;
+    }
+}
+h3{
+    padding-left: 30px;
+}

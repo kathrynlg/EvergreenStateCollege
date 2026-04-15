@@ -1,0 +1,94 @@
+@charset "utf-8";
+/*CSS Document*/
+
+body {
+   font-family: Helvetica, Arial, sans-serif; 
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #222;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #222;
+}
+
+p {
+    font-size: 16px;
+    color: #222;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 40%;
+    border-radius: 50%;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.container {
+    margin: 80px;
+    padding: 40px;
+    background-color: #F4AFB4;
+}
+
+.list {
+    text-align: center;
+    list-style-position: inside;
+}
+
+button {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #AEFFD8;
+}
+
+@media screen and (min-width: 320px){
+
+    .container {
+        background-color: #C5D5E4;
+    }
+
+}
+
+@media screen and (min-width: 550px){
+
+    .container {
+        background-color: #F0EBD8;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+
+    .container {
+        background-color: #BBDFC5;
+    }
+
+}
+
+@media screen and (min-width: 960px){
+
+    .container {
+        background-color: #F4AFB4;
+    }
+
+}

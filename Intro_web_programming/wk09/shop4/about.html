@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Material-UI -->
+    <script src="https://unpkg.com/@mui/material@5.15.10/umd/material-ui.production.min.js"></script>
+
+    <!-- Updated Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+
+</head>
+<body>
+
+
+    <div id="root"></div>
+    <script src="header/nav.js" type="text/babel"></script>
+    <script type="text/babel">
+     const { AppBar, Toolbar, Typography, Box, Container, Grid, CardMedia } = MaterialUI;
+
+        function AboutUs(){
+            return(
+                <Container>
+                    {/*Shop Img*/}
+                    <Box sx={{ my:4 }}>
+                        <CardMedia
+                            component="img"
+                            image="https://c7.alamy.com/comp/MR0G79/random-pictures-MR0G79.jpg"
+                            alt="Our Shop"
+                            sx={{ wide: "100%", boarderRaduis: "8px" }}
+                        />
+                    </Box>
+                    {/*About us Content*/}
+                    <Box sx={{ my: 4 }}>
+                        <Typography variant="h1" gutterBottom>
+                            About Our Shop
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            Welcome to our Shop! Wed Are etc etc etc body 1
+                        </Typography>
+                        <Typography variant="body1" paragraph>
+                            etc etc continued with extra stuff
+                        </Typography>
+                    </Box>
+                    {/*Google maps ifram*/}
+                    <Box sx={{ my: 4 }}>
+                        <Typography variant="h2" gutterBottom>
+                            About Our Shop
+                        </Typography>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7440.39202406291!2d-86.827955!3d21.184371!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2c221191fde7%3A0xbc89e1d77885992f!2sLos%20Pollos%20Hermanos!5e0!3m2!1sen!2sus!4v1741664283587!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="400" 
+                            style={{ border:0 }}
+                            allowFullScreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                    </Box>
+                </Container>
+            );
+        }
+        
+        //Footer Comp
+        function Footer(){
+            return(
+                <Box className="footer" textAlign="center" py={2} bgcolor="primary.main" color="white">
+                    <Typography variant="nav1">&copy; 2025 My thingy homepage <br /></Typography>
+                    <Typography variant="nav1">All Rights Reserved.</Typography>
+                </Box>
+            );
+        }
+
+   
+   
+   //Main About Us Content
+        function App(){
+            return(
+                <React.Fragment> 
+                    <Navbar />
+                    <AboutUs />
+                    
+                    
+                    <Footer />
+                </React.Fragment>
+            );
+        }
+
+
+        //render the React App
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -99999px;
+}

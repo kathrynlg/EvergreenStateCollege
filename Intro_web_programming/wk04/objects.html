@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<HTML lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </head>
+    <body>
+        <h1>Objects wk04</h1>
+    <h2>first Object</h2>
+    <p id = "demo1"></p>
+    <script type = "text/babel">
+        const person = {}
+
+        person.firstName = "John";
+        person.lastName = "Smith";
+        person.age = "32";
+        person.hairColor = "brown";
+    
+        document.getElementById("demo1").innerHTML  = person.firstName + " " +person.lastName+ 
+        " is " + person.age + " years old and has "+person.hairColor + " colored hair.";
+
+    </script>
+
+    <h2>Object Structures</h2>
+    <p id = "demo2"></p>
+    <script type = "text/babel">
+        function Person(first, last, age, hair){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this. hair = hair;
+        }
+
+        const myFriend = new Person("John", "Smith", "32", "brown");
+
+        document.getElementById("demo2").innerHTML  = 
+        "My friend is named " + myFriend.firstName
+        + " and is " + myFriend.age+"years old.";
+
+    </script>
+
+
+
+<h2>Multiple Objects</h2>
+    <p id = "demo3"></p>
+    <script type = "text/babel">
+        function Person(first, last, age, hair){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this. hair = hair;
+        }
+
+        const myDad = new Person("John", "Smith", "32", "brown");
+        const myMom = new Person("Anne", "Star", "30", "red");
+
+        document.getElementById("demo3").innerHTML  = "My dad is "
+        +myDad.firstName +" is married to " + myMom.firstName 
+        + ". He is " +myDad.age +" and she is "
+        +myMom.age +" years old.";
+
+    </script>
+
+    </body>
+
+</html>

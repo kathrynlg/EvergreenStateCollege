@@ -1,0 +1,110 @@
+/*CSS Documnet*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.skip-link {
+    background-color: #fff;
+    position: absolute;
+    padding: 12px;
+    display: block;
+    z-index: 5;
+}
+
+.skip-link:not(:focus):not(:active) {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 1px;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a, 
+nav button {
+    display: block;
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+nav a:hover, 
+nav button:hover,
+nav a:focus,
+nav button:focus {
+    background-color:#777;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+}
+
+/* Sub Menu Styles*/
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 160px;
+}
+
+nav ul li:hover ul > ul,
+nav ul li:focus-within > ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 15px;
+}
+
+.backimg {
+    background-image: url("../img/landscape.jpg");
+    background-color: #ccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Button */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+button:focus {
+    background-color: #777;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+}

@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d1d1d1;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 10px;
+
+}

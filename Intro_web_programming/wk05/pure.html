@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<HTML lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <header>Pure functions JS</header>
+    </head>
+    <body>
+        <h1>Pure Functions</h1>
+    <h2>1st attempt - Impure</h2>
+        <p id = "demo1"></p>
+        <script type = "text/babel">
+            var fredrick1 = {
+                name: "Fredrick Douglas",
+                canRead: "false",
+                canWrite: "false"
+            }
+        function selfEducate1() {
+            fredrick1.canRead = true;    
+            fredrick1.canWrite = true;    
+
+        }
+
+        selfEducate1();
+
+     document.getElementById("demo1").innerHTML = JSON.stringify(fredrick1); 
+
+        </script>
+          
+
+
+    <h2>2nd attempt - Impure</h2>
+        <p id = "demo2"></p>
+        <script type = "text/babel">
+            var fredrick2 = {
+                name: "Fredrick Douglas",
+                canRead: "false",
+                canWrite: "false"
+            };
+        const selfEducate2 = person => {
+            person.canRead = true;
+            person.canWrite = true;
+            return person;
+        };
+ 
+           document.getElementById("demo2").innerHTML = JSON.stringify(selfEducate2(fredrick2)); 
+
+        </script>
+
+    <h2>3rd attempt - Impure</h2>
+        <p id = "demo3"></p>
+        <script type = "text/babel">
+            var fredrick3 = {
+                name: "Fredrick Douglas",
+                canRead: "false",
+                canWrite: "false"
+            };
+        const selfEducate3 = person => ({
+          ...person,
+          canRead: true,
+          canWrite: true
+        }); 
+//           document.getElementById("demo3").innerHTML = JSON.stringify(fredrick3); 
+
+           document.getElementById("demo3").innerHTML = JSON.stringify(selfEducate3(fredrick3) ); 
+
+        </script>
+
+
+
+
+    </body>
+
+</html>

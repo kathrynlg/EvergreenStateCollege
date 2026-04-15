@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8"> 
+    <head>
+    </head>
+	<body>
+
+
+        <h1>Week 2, FESE II</h1>
+        <h2>week 2</h2>     
+
+        <div>
+            <h2>part 1</h2>  
+            <br>
+            <h2 id = "greeting"></h2>
+            <p id="info"> </p>
+        </div>
+        <br>
+        <div>
+            <h2>part 2</h2>  
+            <br>
+            <h2 id = "checkLogin"></h2>
+            <p id="logStatus"> </p>
+        </div>
+		<br>
+        <div>
+            <h2>part 3</h2>  
+            <br>
+            <p id="reportGrade"></p>
+            <p id="scorePrint"> </p>
+        </div>	
+        <script>
+            //part 1, vars, lets, ints, etc
+            let greeting = "Hello ";
+            let greeted = "World";
+            let year = 2026;
+            let message = greeting + " " + greeted;
+
+            document.getElementById('greeting').textContent = message;
+            document.getElementById('info').textContent ="The year is " + year +".";
+            
+            //part 2 
+            let loginId = true;
+            document.getElementById('checkLogin').textContent = "is the user logged in? "+ loginId;
+
+            if (loginId==true) {
+                document.getElementById('logStatus').textContent = "User is logged in" ;
+            } 
+            else {
+                document.getElementById('logStatus').textContent = "User is not logged in" ;
+            }
+
+            //part 3, if statements
+
+            let score = 85;
+             document.getElementById('reportGrade').textContent ="your reported grade is "+score;
+
+            if ( score >= 90) {
+                document.getElementById('scorePrint').textContent ="grade is an A";
+            }
+            else if ( score >= 80) {
+                document.getElementById('scorePrint').textContent ="grade is an B";
+            }
+            else if ( score >= 70) {
+                document.getElementById('scorePrint').textContent ="grade is an C";
+            }
+            else {
+                document.getElementById('scorePrint').textContent ="Needs improvement";
+            }
+
+
+
+        </script>
+    <h3><a href="../../../">back to main landing page</a></h3>
+	</body>
+</html>

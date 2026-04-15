@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUI basic Shop 4</title>
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Material-UI -->
+    <script src="https://unpkg.com/@mui/material@5.15.10/umd/material-ui.production.min.js"></script>
+
+    <!-- Updated Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+</head>
+
+<body>
+<div id="root"></div>
+
+<script src="header/nav.js" type="text/babel"></script>
+
+<script type="text/babel">
+const { AppBar, Toolbar, Typography, Button, Container, Box, CssBaseline, Grid, Card, CardContent, CardActions, CardMedia } = MaterialUI; 
+
+// Hero Section
+function HeroSection(){
+    return (
+        <Box className="hero-section" textAlign="center">
+            <Typography variant="h1" gutterBottom>
+                Welcome to my MUI Shop4
+            </Typography>
+
+            <Box display="block" mt={2}>
+                <Button variant="contained" color="primary" size="large" href="product.html">
+                    Buy some stuff
+                </Button>
+            </Box>
+        </Box>
+    );
+}
+
+// Feature Cards
+function FeatureCards(){
+    return (
+        <Container className="card-container">
+            <Grid container spacing={4} justifyContent="center">
+                
+                {/* Product 1 */}
+                <Grid item xs={12} sm={6} md={4}>
+                    <Card>
+                        <CardMedia
+                            component="img"
+                            height="200"
+                            image="https://www.lego.com/cdn/cs/set/assets/bltdacf26ce85db083d/blt94fedcc1daf48b2a-42228_WEB_SEC02_NOBG.png"
+                            alt="LEGO Product 1"
+                        />
+                        <CardContent>
+                            <Typography variant="h5">
+                                Product 1
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                This is the description of the first feature.
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="primary" component="a" href="https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product1.html">
+                                Check it out
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+                {/* Product 2 */}
+                <Grid item xs={12} sm={6} md={4}>
+                    <Card>
+                        <CardMedia
+                            component="img"
+                            height="200"
+                            image="https://www.lego.com/cdn/cs/set/assets/blt63c7f7be0a7373c2/5006955.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1"
+                            alt="LEGO Product 2"
+                        />
+                        <CardContent>
+                            <Typography variant="h5">
+                                Product 2
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                This is the description of the second feature.
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="primary" component="a" href="https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product2.html">
+                                Check it out
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+                {/* Product 3 */}
+                <Grid item xs={12} sm={6} md={4}>
+                    <Card>
+                        <CardMedia
+                            component="img"
+                            height="200"
+                            image="https://m.media-amazon.com/images/I/81qWfXKZr9L._AC_SL1500_.jpg"
+                            alt="Product 3"
+                        />
+                        <CardContent>
+                            <Typography variant="h5">
+                                Product 3
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                This is the description of the third feature.
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="primary" component="a" href="https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product3.html">
+                                Check it out
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+
+            </Grid>
+        </Container>
+    );
+}
+
+// Contact Section
+function ContactUs() {
+    return(
+        <Box className="contact-section" textAlign="center">
+            <Typography variant="h2" gutterBottom>
+                Contact Us
+            </Typography>
+            <Typography variant="body1" color="text.secondary" gutterBottom>
+                We'd love to hear from you! Get in touch for any questions
+            </Typography>
+            <Box display="block" mt={12}>
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                    size="large" 
+                    component="a" 
+                    href="https://kag.csevg.com/Intro_web_programming/wk09/shop4/about.html">
+                    Contact Us
+                </Button>
+            </Box>
+        </Box>
+    );
+}
+
+// Footer
+function Footer(){
+    return(
+        <Box className="footer" textAlign="center" py={2} bgcolor="primary.main" color="white">
+            <Typography variant="body2">
+                &copy; 2025 My thingy homepage <br />
+            </Typography>
+            <Typography variant="body2">
+                All Rights Reserved.
+            </Typography>
+        </Box>
+    );
+}
+
+// App
+function App(){
+    return(
+        <React.Fragment> 
+            <CssBaseline />
+            <Navbar />
+            <HeroSection />
+            <FeatureCards />
+            <ContactUs />
+            <Footer />
+        </React.Fragment>
+    );
+}
+
+// Render
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+</body>
+</html>

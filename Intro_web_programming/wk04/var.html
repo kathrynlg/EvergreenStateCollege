@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Variables</title>
+
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    
+    </head>
+<body>
+    <h1>Variables</h1>
+
+    <h2>Var1</h2>
+    <p id = "demo1"></p>
+    <script type="text/babel">
+                var pizza = true
+                pizza = false
+                document.getElementById("demo1").innerHTML = pizza;
+            </script>
+
+
+    <h2>Var2</h2>
+    <p id = "demo2">Var2</p>
+        <script type="text/babel">
+            var x = 5;
+            var y = 8; 
+            var z = x + y;
+            document.getElementById("demo2").innerHTML = z;
+    </script>
+
+        <h2>let1</h2>
+        <p id = "demo3">Let1</p>
+        <script type="text/babel">
+            let x = 10; 
+            
+            {
+                let x = 2;
+            }
+            document.getElementById("demo3").innerHTML = x;
+
+    </script>
+
+        <h2>const1</h2>
+        <p id = "demo4">Let1</p>
+        <script type="text/babel">
+            const pizza = true
+            
+            
+            
+            document.getElementById("demo4").innerHTML = pizza;
+
+    </script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>React 101</title>
+    </head>
+    <body>
+        <!-- React Library & DOM -->
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script>
+        <!-- Output Containers -->
+        <div id="react-container-h1"></div>
+        <div id="react-container-h2"></div>
+        <div id="react-container-list1"></div>
+                <div id="react-container-list2"></div>
+
+        
+
+        <script>
+            const element = React.createElement("h1", null, "Hello, React!");
+            ReactDOM.render(element, document.getElementById("react-container-h1"));
+        </script>
+
+        <script>
+            const elementH2 = React.createElement("h2", null, "1st list");
+            ReactDOM.render(elementH2, document.getElementById("react-container-h2"));
+        </script>
+
+        <script>
+            const list = React.createElement(
+                "ul", 
+                null, 
+                React.createElement("li", null, "Item 1"),
+                React.createElement("li", null, "Item 2"),
+                React.createElement("li", null, "Item 3")
+                );
+
+            ReactDOM.render(list, document.getElementById("react-container-list1"));
+        </script>
+
+        <script>
+            const list2 = React.createElement(
+                "ul", 
+                null, 
+                React.createElement("li", null, "Item 4"),
+                React.createElement("li", null, "Item 5"),
+                React.createElement("li", null, "Item 6")
+                );
+
+            ReactDOM.render(list2, document.getElementById("react-container-list2"));
+        </script>
+
+
+    </body>
+</html>
+
+<!--
+
+<!doctype HTML> 
+<html lang = "en">
+        <head>
+                <meta charset="UTF-8">
+
+        
+        </head>
+        
+        
+        <body>
+        
+        <!-- React Library & DOM 
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="http://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+
+        <!-- Outout Containers 
+        <div id = "react-container-h1"></div>
+
+
+        <script>
+            const element = React.createElement("h1", null, "hello React");
+
+            ReactDOM.render(element, document.getElementById("react-container-h1"));
+
+        </script>
+
+
+        </body>
+
+
+</html>
+
+-->

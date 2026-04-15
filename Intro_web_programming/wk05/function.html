@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Functional JS</title>
+    </head>
+    <body>
+        <!-- React Library & DOM -->
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+        <!-- Output Containers -->
+
+    <h1>Functional JS</h1>
+    <h2>Functions as variables</h2>
+        <p id = "demo1"></p>
+        <script type = "text/babel">
+            var log = function(message){
+                document.getElementById("demo1").innerHTML = message;
+            };
+        log("in JS - functions can be variables");
+        </script>
+
+    <h2>Functions added to objects</h2>
+        <p id = "demo2"></p>
+        <script type = "text/babel">
+            const obj = {
+                message: "They can be added to objects like variables",
+                log() {
+                    document.getElementById("demo2").innerHTML = this.message;
+                }
+            };
+            obj.log();
+        </script>            
+
+    <h2>Functions inserted from functions</h2>
+        <p id = "demo3"></p>
+        <script type = "text/babel">
+            const functionAray = [
+                () =>"Function 1",
+                () => "Function 2",
+                () => "Function 3"
+            ];
+            document.getElementById("demo3").innerHTML = functionAray[0];
+        </script>
+
+    <h2>Returned from functions</h2>
+        <p id = "demo4"></p>
+        <script type = "text/babel">
+            const createScream = function(logger) {
+                return function(message){
+                    logger(message);
+                };            
+            };
+            const scream = createScream(message=> {
+            document.getElementById("demo4").innerHTML = message;
+            });
+              
+              scream("functions can be returned from other functions");
+        </script>
+
+
+
+    </body>
+</html>
+

@@ -1,0 +1,134 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Material-UI -->
+    <script src="https://unpkg.com/@mui/material@5.15.10/umd/material-ui.production.min.js"></script>
+
+    <!-- Updated Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    
+
+</head>
+<body>
+
+
+    <div id="root"></div>
+
+     <script src="header/nav.js" type="text/babel"></script> 
+    
+    <script type="text/babel">
+        const { AppBar, Toolbar, Typography, Button, Box, Container, Grid, Card, CardContent, CardMedia } = MaterialUI;
+
+
+        //Product Card Component
+        function ProductCard({ name, Description, price, image, link }) {
+            return (
+                <Card class="cardSpecs">
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={image}
+                        alt={name}
+                    />
+                    <CardContent>
+                        <Typography variant="body2" color="textSecondary">
+                            {name}
+                        </Typography>
+
+                        <Typography variant="h2" component="div">
+                            {Description}
+                        </Typography>
+
+                        <Typography variant="listprice" color="primary">
+                            ${price}
+                        </Typography>
+                        
+                    </CardContent>
+                    <Button size="small" color="primary" href={link}>CHeck it out!</Button>
+                </Card>
+            );
+        }
+
+        //Product Page Comp
+        function ProductPage(){
+            const products=[
+            { name: "Product 1", description:"description1", price: "999.99", image: "https://www.lego.com/cdn/cs/set/assets/bltdacf26ce85db083d/blt94fedcc1daf48b2a-42228_WEB_SEC02_NOBG.png", link: "https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product1.html" },
+            { name: "Product 2", description:"description2", price: "29.99", image: "https://www.lego.com/cdn/cs/set/assets/blt63c7f7be0a7373c2/5006955.png?format=webply&fit=bounds&quality=75&width=800&height=800&dpr=1", link: "https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product2.html" },
+            { name: "Product 3", description:"description3", price: "39.99", image: "https://m.media-amazon.com/images/I/81qWfXKZr9L._AC_SL1500_.jpg", link: "https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product3.html" },
+            { name: "Product 4", description:"description5", price: "49.99", image: "./imgs/lego4.jpg", link: "https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product4.html" },
+            { name: "Product 5", description:"description6", price: "59.99", image: "./imgs/lego5.jpg", link: "https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product5.html" },
+            { name: "Product 6", description:"description1", price: "69.99", image: "./imgs/lego6.jpg", link: "https://kag.csevg.com/Intro_web_programming/wk09/shop4/products/product6.html" }
+            ];
+            
+            return(
+                <Box className="product-page">
+                    <Container>
+                        <Box className="header-title">
+                            <Typography variant="h1">Our Product</Typography>
+                        </Box>
+                        <Grid container spacing={4}>
+                            {products.map((product, index) => (
+                            <Grid item xs={12} sm={6} md={4} key={index}>
+                                <ProductCard
+                                    name={product.name}
+                                    price={product.price}
+                                    image={product.image}
+                                    link={product.link}
+                                />
+                            </Grid>
+                        ))}
+                        </Grid>
+                    </Container>
+                </Box>
+            );
+        }
+
+
+
+        //Footer Comp
+        function Footer(){
+            return(
+                <Box className="footer" textAlign="center" py={2} bgcolor="primary.main" color="white">
+                    <Typography variant="nav1">&copy; 2025 My thingy homepage <br /></Typography>
+                    <Typography variant="nav1">All Rights Reserved.</Typography>
+                </Box>
+            );
+        }
+
+
+
+        //Main App Comp
+        function App(){
+            return (
+                <React.Fragment> 
+                    
+                    <Navbar />
+                    <ProductPage />
+                    <Footer />
+                </React.Fragment>
+            );
+        }
+
+
+        //render the React App
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+
+    </script>
+
+    </body>
+
+
+
+</html> 

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--Element css -->
+        <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+       
+
+        <!-- local settings -->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Wk9 Biz landing page</title>
+    </head>    
+    <body>
+        <div id="app">
+            <!-- menu -->
+            <el-menu mode="horizontal" :default-active="activeIndex" class="el-menu-demo">
+                <el-menu-item index="1"><a href="#showcase">Home</a></el-menu-item>
+                <el-menu-item index="2"><a href="#section-a">Services</a></el-menu-item>
+                <el-menu-item index="3"><a href="#section-b">Portfolio</a></el-menu-item>
+                <el-menu-item index="4"><a href="#section-c">Quote</a></el-menu-item>
+                <el-menu-item index="5"><a href="#section-d">Contact</a></el-menu-item>
+                <el-menu-item index="6"><a href="../../index.html">return to main page</a></el-menu-item>
+
+            </el-menu>
+                <header id="showcase" class = "grid">
+                    <div class ="slideshow-container">
+                        <!-- slideshow-container JS, was bg img set with css-->
+                        <div class="slide">
+                            <img src="https://plus.unsplash.com/premium_photo-1679079456083-9f288e224e96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt"image of a computer and recording equipment with the display of a sound wave on the sreen">
+                        </div>   
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="person typing on a labtop">
+                        </div>   
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="close up of a keyboard">
+                        </div> 
+
+                        <!-- slideshow controls -->
+                        <button class="prev">&#10094</button>
+                        <button class="next">&#10095</button>
+                        <button class="pauseBtn" class="pause">Pause</button>
+
+                    </div>
+                    <div class = "content-wrap">
+                        <h1>Welcome to me biz landing page</h1>
+                        <p>Scratch curl up and sleep on the freshly laundered towels yet human is behind a closed door, emergency! abandoned! meeooowwww!!!. Climb a tree, wait for a fireman jump to fireman then scratch his face. Trip on catnip show belly for bathe private parts with tongue then lick owner's face but throw down all the stuff in the kitchen, and crash against wall but walk away like nothing happened annoy owner until he gives you food say meow repeatedly until belly rubs, feels good purrrrrr. </p>
+                        <button class ="btn" onclick="window.location.href='#section-b';">Read More</button>
+                    </div>
+                </header>
+                <!-- main area of the page -->
+                <main>
+                    <!-- section a -->
+                    <section id = "section-a" class = "grid">
+                        <div class = "content-wrap">
+                            <h2 class = "content-title">Web & Application Development </h2>
+                            <div class = "content-text">
+                                <p>In the middle of the night i crawl onto your chest and purr gently to help you sleep catty ipsum and leave fur on owners clothes. Bawl under human beds human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! run as fast as i can into another room for no reason thinking longingly about tuna brine scratch at door to be let outside, get let out then scratch at door immmediately after to be let back in and you call this cat food catty ipsum. Kitty loves pigs cereal boxes make for five star accommodation rub face on owner twitch tail in permanent irritation or stand in front of the computer screen kitty poochy, plays league of legends. Dismember a mouse and then regurgitate parts of it on the family room floor meowsiers jump up to edge of bath, fall in then scramble in a mad panic to get out and i shall purr myself to sleep. Look at dog hiiiiiisssss jump on counter removed by human jump on counter again removed by human meow before jumping on counter this time to let the human know am coming back loves cheeseburgers why can't i catch that stupid red dot attack the dog then pretend like nothing happened. Gimme attention gimme attention gimme attention gimme attention gimme attention gimme attention just kidding i don't want it anymore meow bye purrrrrr, yet tweeting a baseball cry louder at reflection so lies down but attack feet.</p>                        
+                            </div>
+                        </div>
+                    </section>
+                    <!-- section b -->
+                    <section id = "section-b" class = "grid">
+                        <ul>
+                            <!-- card 1 start -->
+                            <li>
+                                <div class = "card">
+                                    <img src="./img/person_comp.jpg" alt = "person using laptop">
+                                    <div class = "card-content">
+                                        <h3 class = "card-title">Web Development</h3>
+                                        <p>Mark territory burrow under covers try to jump onto window and fall while scratching at wall or meow go back to sleep owner brings food and water tries to pet on head, so scratch get sprayed by water because bad cat, for sit on the laptop humans,humans, humans oh how much they love us felines we are the center of attention they feed, they clean . Human is behind a closed door, emergency! abandoned! meeooowwww!!!</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- card 2 start -->
+                            <li>
+                                <div class = "card">
+                                    <img src="./img/phone.jpg" alt = "user holding cell phone">
+                                    <div class = "card-content">
+                                        <h3 class = "card-title">Web Development</h3>
+                                        <p>Walk on car leaving trail of paw prints on hood and windshield. Catasstrophe soft kitty warm kitty little ball of furr and jump off balcony, onto stranger's head scratch at door to be let outside, get let out then scratch at door immmediately after to be let back in yet no, you can't close the door, i haven't decided whether or not i wanna go out yet lick master's hand at first then bite because im moody. Purr while eating rub face on everything, or spit up on light gray carpet instead of adjacent linoleum bite the neighbor's bratty kid, yet it's 3am, time to create some chaos and love blinks and purr purr purr purr yawn. Lie in the sink all day. </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- card 2 start -->
+                            <li>
+                                <div class = "card">
+                                    <img src="./img/pie_chart.jpg" alt = "computer with pie chart">
+                                    <div class = "card-content">
+                                        <h3 class = "card-title">MTech Marketing</h3>
+                                        <p>Get suspicious of own shadow then go play with toilette paper hate dogs yet love fish rub face on owner nyan fluffness ahh cucumber!. Please let me outside pouty face yay! wait, it's cold out please let me inside pouty face oh, thank you rub against mommy's leg oh it looks so nice out, please let me outside again the neighbor cat was mean to me please let me back inside roll over and sun my belly yet sees bird in air, breaks into cage and attacks creature for litter kitter kitty litty little kitten big roar roar feed me. Intrigued by the shower purr purr purr until owner pets why owner not pet me hiss scratch meow but curl into a furry donut to pet a cat, rub its belly.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Splitter -->
+
+                    <div class="split.img">
+                        <el-splitter style="height: 300px;">
+                            <el-splitter-panel :size="30">
+                                <div class="split-img left-img">
+                                </div>
+                            </el-splitter-panel>
+                            <el-splitter-panel :size="70">
+                                <div class="split-img right-img">
+                                </div>
+                            </el-splitter-panel>
+                        </el-splitter>
+
+                    </div>
+
+                    <!-- section C -->
+                    <section id = "section-c" class = "grid">
+                        <div class = "content-wrap">
+                            <h2 class = "content-title">request a quote</h2>
+                            <form action = "/action_page.php">
+                                <label for ="fname">First Name </label>    
+                                <input type = "text" id ="fname" name="firstname" placeholder
+                                ="You first name..."> 
+                                
+                                <label for ="lname">Last Name </label>
+                                <input type = "text" id ="lname" name="lastname" placeholder
+                                ="You last name..."> 
+
+                                <label for ="country">Country </label>
+                                <select id = "country" name = "country">
+                                    <option value ="c1anada">Canada</option>
+                                    <option value ="mexico">Mexico</option>
+                                    <option value ="usa">USA</option>
+                                </select>
+                                
+                                <button type="submit" style="transform: none;">Submit</button>
+
+                            </form>
+
+                        </div>
+                    </section>
+                    <!-- section D -->
+                    <section id = "section-d" class = "grid">
+                        <div class = "box">
+                            <h2 class = "content-title">Contact Us</h2>
+                            <p>Knock dish off table head butt cant eat out of my own dish sleep all day whilst slave is at work, play all night whilst slave is sleeping meow and walk away, get suspicious of own shadow then go play with toilette paper or there's a forty year old lady there let us feast, destroy couch as revenge cat jumps and falls onto the couch purrs and wakes up in a new dimension filled with kitty litter meow meow yummy there is a bunch of cats hanging around eating catnip . </p>
+                            <p>contact@meoewcatnip.fake</p>                   
+                        </div>
+                        <div class = "box">
+                            <h2 class = "content-title">About Our Company</h2>
+                            <p>Damn that dog show belly and mrow yet really likes hummus so climb leg. Stand in front of the computer screen if it fits, i sits and cats are a queer kind of folk for soft kitty warm kitty little ball of furr so you're just gonna scroll by without saying meowdy?. Waffles lay on arms while you're using the keyboard.</p>
+                        </div>
+                    </section>
+                </main>
+                <!-- footer section -->
+            <footer id = "main-footer" class = "grid">
+                <div>My Biz Name LLC</div>
+                <div>Project by Kat Goldston</div>
+            </footer>
+            <div class="progress"></div>
+            <el-backtop :right="40" :bottom="40" />
+        </div> <!-- id = app closed -->
+        
+         <!-- Vue 3 -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- Element Plus -->
+        <script src="https://unpkg.com/element-plus"></script>
+
+        <!-- remove later
+            <h3>
+                <a href="../../index.html">return to main page</a>
+            </h3>
+
+            -->
+            <script>
+                const { createApp } = Vue
+
+                createApp ({
+                    data () {
+                        return {
+                            activeIndex: '1'
+                        }
+                    }
+                }).use(ElementPlus).mount('#app') 
+            </script>
+
+            <!-- keep last -->
+            <script src="js/script.js"></script>
+            <script type="module" src="js/script2.js"></script>
+            
+    </body>
+</html>

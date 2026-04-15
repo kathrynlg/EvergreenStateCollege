@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<HTML lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        
+    </head>
+    <body>
+        <h1>JS Functions wk04</h1>
+        <h2>Function Structure</h2>
+        <p id = "demo1"></p>
+        <script type = "text/babel">
+            let x = myFunctionName(2, 600)
+            document.getElementById("demo1").innerHTML = x;
+            function myFunctionName(a, b){
+                //stuff here
+                    return a * b;
+                }
+        </script>
+
+
+        <p id = "demo2"></p>
+        <script type = "text/babel">
+            let x = myPara()
+            document.getElementById("demo2").innerHTML = myPara();
+            function myPara(c = 40, d = 3){
+                //stuff here
+                    return c + d;
+                }
+        </script>
+
+<h2>parameters with words</h2>
+        <p id = "demo3"></p>
+        <script type = "text/babel">
+            let x = myPara()
+            document.getElementById("demo3").innerHTML = myFunction();
+            function myFunction(name ="Kat", activity = "parenting"){
+                //stuff here
+                    return (`${name} is crazy from ${activity}`);
+                }
+        </script>
+
+    </body>
+
+</html>
